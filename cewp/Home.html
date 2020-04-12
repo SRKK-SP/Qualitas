@@ -1,0 +1,233 @@
+<script src="https://qmg.sharepoint.com/SiteAssets/js/jquery.js"></script>
+<script src="https://qmg.sharepoint.com/SiteAssets/js/Home.js"></script>
+<link href="https://qmg.sharepoint.com/SiteAssets/css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
+<!--Quicklinks-->
+<!-- <div style="position:absolute;">
+    <div class="rounded-corners Ql" style="z-index:998;">
+        <div class="rotate Qlt">Quick &nbsp;Link</div>
+        <div class="row rQ">
+
+        </div>
+    </div>
+</div> -->
+<div style="position: absolute;">
+    <div class="rounded-corners Ql" style="z-index: 998; width: 35px;">
+        <div class="rotate Qlt">Quick &nbsp;Links
+
+        </div>
+        <div class="row rQ" id="QuickLinks" style="display: none;">
+            <!--quick links container-->
+
+        </div>
+    </div>
+</div>
+<!-- <div class="loader"></div> -->
+<section id="main-slider" class="no-margin">
+    <div style="width:100%;height:100%;margin-top: -78px">
+        <div class="carousel Cslide slide text-center" style="height:100%;">
+            <ol class="carousel-indicators" id='idSliderOL'>
+
+            </ol>
+            <div class="carousel-inner" id="idSlideInner" style="height:100%;">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#main-slider-->
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <!-- announcement -->
+            <div class="col-xs-12 col-sm-8 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="line-height:0;">Announcement</h2>
+                    <div style="width:100%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Lists/Announcement/AllItems.aspx">View All</a></div>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active" style="margin-right:10px;"><a class="custom"
+                            href="#Eventtab1" aria-controls="home" role="tab" data-toggle="tab"
+                            style="padding-bottom:8px;padding-top:8px;">Latest</a>
+                    </li>
+                    <li role="presentation" style="margin-right:10px;"><a href="#Eventtab2" class="custom"
+                            aria-controls="profile" role="tab" data-toggle="tab"
+                            style="padding-bottom:8px;padding-top:8px;">Previous</a></li>
+                    <li></li>
+                </ul>
+                <div class="tab-content" style="padding-left:0;padding-right:0;">
+                    <div role="tabpanel" class="tab-pane active" id="Eventtab1">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Eventtab2">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /announcement -->
+            <!-- Upcoming Events -->
+            <div class="col-xs-12 col-sm-4 wow fadeInDown">
+                <div class="calendar-title">
+                    <h2 style="line-height:0;">Upcoming Events</h2>
+                    <div style="width:49%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Lists/Upcoming%20Events/AllItems.aspx">View All</a></div>
+                </div>
+                <div style="background-color:#eee;border: 1px solid;padding-bottom:16px;">
+                    <div class="cal-day"></div>
+                    <div id="idUpcomingEvents">
+
+                    </div>
+                </div>
+            </div>
+            <!-- /Upcoming Events -->
+        </div>
+    </div>
+</section>
+
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="width:50%;line-height:0;">New Employee</h2>
+                    <div style="width:50%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Lists/Employee/AllItems.aspx">View All</a></div>
+                </div>
+                <div id="about-slider">
+                    <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators visible-xs" id="idEmpOl"></ol>
+                        <div class="carousel-inner" id="idNewEmp">
+
+                        </div>
+
+                        <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a class=" right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--BDAY OF THE MONTH-->
+            <div class="col-sm-6 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="width:70%;line-height:0;">Birthday of The Month</h2>
+                    <div style="width:30%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Lists/Employee%20Birthday/AllItems.aspx">View All</a></div>
+                </div>
+                <div class="testimonial" id="idDivbday">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--News-->
+<section id="content">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="line-height:0;">NEWS</h2>
+                    <div style="width:100%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Lists/CompanyNews/AllItems.aspx">View All</a></div>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active" style="margin-right:10px;"><a class="custom" href="#tab1"
+                            aria-controls="home" role="tab" data-toggle="tab"
+                            style="padding-bottom:8px;padding-top:8px;">Company
+                            News</a></li>
+                    <li role="presentation" style="margin-right:10px;"><a href="#tab2" class="custom"
+                            aria-controls="profile" role="tab" data-toggle="tab"
+                            style="padding-bottom:8px;padding-top:8px;">World News</a></li>
+                    <li></li>
+                </ul>
+                <div class="tab-content" style="padding-left:0;padding-right:0;">
+                    <div role="tabpanel" class="tab-pane active" id="tab1">
+                        <div class="row" id="idDivCompanyNews">
+
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="tab2">
+                        <div class="row" id="idDivWorldNews">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Photo && Video Library-->
+<section id="content" style="padding-top:0;padding-bottom:40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="line-height:0;">Photo Library</h2>
+                    <div style="width:73%;text-align:right;line-height: 40px;font-size: 12px;"><a
+                            href="https://qmg.sharepoint.com/Photo%20Library/Forms/AllItems.aspx">View All</a></div>
+                </div>
+                <div class="testimonial" style="padding-top:0;">
+                    <div id="pQ" class="media testimonial-inner">
+                        <div>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="100%" height="370px"
+                                    src="https://qmg.sharepoint.com/Photo%20Library/Forms/AllItems.aspx"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 wow fadeInDown">
+                <div class="news-title">
+                    <h2 style="line-height:0;">Video Library</h2>
+                    <div style="width:75%;text-align:right;line-height: 40px;font-size: 12px;">View All</div>
+                </div>
+                <div class="" style="padding-top:0;">
+                    <div class="media-body">
+
+                        <!-- Carousel -->
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators" id="idIndicator">
+
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" id="idDivVideos">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--Partners-->
+<section id="partner">
+    <div class="container">
+        <div class="center wow fadeInDown" style="padding-bottom: 25px;">
+            <h2>Our Awards</h2>
+        </div>
+        <div class="partners">
+            <ul id="ulAwards">
+
+            </ul>
+        </div>
+    </div>
+    <!--/.container-->
+</section>
